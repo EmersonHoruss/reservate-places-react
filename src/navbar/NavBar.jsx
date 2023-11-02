@@ -11,10 +11,10 @@ const NavBar = () => {
   };
   return (
     <>
-      <nav>
-        <NavLink to="page1">Page 1</NavLink>
-        <NavLink to="page2">Page 2</NavLink>
-        <NavLink to="page3">Page 3</NavLink>
+      <nav className="flex gap-4 p-4 shadow-md">
+        <NavLink to="capitalYPatagonia">Capital y Patagonia</NavLink>
+        <NavLink to="norteYEste">Norte y Este</NavLink>
+        <NavLink to="ruta">Ruta</NavLink>
         <button onClick={logout}>logout</button>
       </nav>
     </>

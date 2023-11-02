@@ -5,7 +5,9 @@ import Provider from './context/Provider';
 function App() {
   return (
     <>
-      <Provider><Router1 /></Provider>
+      <Provider>
+        <Router1 />
+      </Provider>
     </>
   );
 }
