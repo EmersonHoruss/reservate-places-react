@@ -15,11 +15,11 @@ export const MyReducer = (state = {}, action) => {
         data: null,
       };
     case types.hire:
-      let data = state.data.map((place) => {
+      const data = state.data.map((place) => {
         if (place.nombre === action.placeName) {
           return { ...place, isHired: true };
         }
-        return place;
+        return {...place};
       });
       localStorage.setItem("data", JSON.stringify(data));
       return {
@@ -27,16 +27,16 @@ export const MyReducer = (state = {}, action) => {
         data,
       };
     case types.unhire:
-      data = state.data.map((place) => {
+      const data2 = state.data.map((place) => {
         if (place.nombre === action.placeName) {
           return { ...place, isHired: false };
         }
-        return place;
+        return {...place};
       });
-      localStorage.setItem("data", JSON.stringify(data));
+      localStorage.setItem("data", JSON.stringify(data2));
       return {
         ...state,
-        data,
+        data:data2,
       };
     default:
       return state;

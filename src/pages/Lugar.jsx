@@ -18,7 +18,6 @@ const Lugar = () => {
   const hire = () => {
     console.log("hire")
     hireFromContext(lugar.nombre);
-    back()
   };
   const back = () => {
     navegacion(-1);
