@@ -19,7 +19,7 @@ const Ruta = () => {
           {places
             .filter((place) => !!place.isHired)
             .map((place) => (
-              <Row key={place.nombre} place={place} />
+              <Row key={place.nombre} lugar={place} />
             ))}
         </div>
       );
@@ -48,6 +48,7 @@ const Ruta = () => {
     if (hasHiredPlaces()) {
       return places
         .filter((place) => !!place.isHired)
+        .map((place) => place.precio)
         .reduce((accumulator, currentValue) => accumulator + currentValue);
     }
     return 0;

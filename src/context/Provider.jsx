@@ -39,6 +39,7 @@ const Provider = ({ children }) => {
     const action = { type: types.unhire, placeName: name };
     dispatch(action);
   };
+  console.log(logeado)
   return (
     <Context.Provider value={{ ...logeado, login, logout, hire, unhire }}>
       {children}

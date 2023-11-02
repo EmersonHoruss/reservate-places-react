@@ -16,7 +16,9 @@ const Lugar = () => {
     unhireFromContext(lugar.nombre);
   };
   const hire = () => {
+    console.log("hire")
     hireFromContext(lugar.nombre);
+    back()
   };
   const back = () => {
     navegacion(-1);

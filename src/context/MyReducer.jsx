@@ -16,7 +16,7 @@ export const MyReducer = (state = {}, action) => {
       };
     case types.hire:
       let data = state.data.map((place) => {
-        if (place.name === action.placeName) {
+        if (place.nombre === action.placeName) {
           return { ...place, isHired: true };
         }
         return place;
@@ -28,7 +28,7 @@ export const MyReducer = (state = {}, action) => {
       };
     case types.unhire:
       data = state.data.map((place) => {
-        if (place.name === action.placeName) {
+        if (place.nombre === action.placeName) {
           return { ...place, isHired: false };
         }
         return place;
